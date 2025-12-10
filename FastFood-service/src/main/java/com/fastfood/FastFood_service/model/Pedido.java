@@ -1,5 +1,7 @@
 package com.fastfood.FastFood_service.model;
 
+// Representa un pedido con sus atributos
+// e incluye metodo deepCopy() para guardar estados inmutables en el historial
 public class Pedido {
     private int id;
     private String nombreCliente;

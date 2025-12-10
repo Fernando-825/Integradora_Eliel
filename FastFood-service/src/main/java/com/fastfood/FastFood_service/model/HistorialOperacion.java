@@ -1,5 +1,8 @@
 package com.fastfood.FastFood_service.model;
 
+// Define que se almacena en la pila
+// Contiene tipoOperacion (CREAR, CANCELAR Y DESPACHAR)
+// y 2 copias del pedido pedidoAntes/Despues. Esto es necesario para Rollback
 public class HistorialOperacion {
     private String tipoOperacion; // "CREAR", "CANCELAR", "DESPACHAR"
     private Pedido pedidoAntes;

@@ -2,6 +2,8 @@ package com.fastfood.FastFood_service.datastructures;
 
 import com.fastfood.FastFood_service.model.Pedido;
 
+// Es la BD principal, almacena TODOS los pedidos (activos, despachados y cancelados)
+// Usa Node que contiene la data (Pedido) y una referencia (next) al sig. nodo
 public class SinglyLinkedList {
 
     // Clase interna para el nodo
@@ -23,7 +25,7 @@ public class SinglyLinkedList {
         this.size = 0;
     }
 
-    /** Agregar al final */
+    /** Agregar pedido al final de la lista */
     public void add(Pedido pedido) {
         Node newNode = new Node(pedido);
         if (head == null) {
@@ -38,7 +40,7 @@ public class SinglyLinkedList {
         size++;
     }
 
-    /** Buscar por id */
+    /** Buscar por id Recorre toda la lista*/
     public Pedido findById(int id) {
         Node current = head;
         while (current != null) {
@@ -50,7 +52,8 @@ public class SinglyLinkedList {
         return null;
     }
 
-    /** Eliminar por id */
+    /** Eliminar por id
+     * Elimina un nodo especifico, ajusta los punteros del nodo anterior y posterior*/
     public boolean removeById(int id) {
         if (head == null) return false;
 

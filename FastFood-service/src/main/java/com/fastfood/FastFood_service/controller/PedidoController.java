@@ -11,6 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 import java.util.Map;
 
+// es la capa que expone las funcionalidades a través de la web usando endpoints REST
+// @RestController: Indica que esta clase maneja peticiones REST.
+//@RequestMapping("/api/pedidos"): Define la ruta base para todos los endpoints.
+//@Autowired: Permite la inyección de dependencias (en este caso, el PedidoService),
+// siguiendo el principio de Inversión de Control (IoC) de Spring.
+
+// Simplemete recibe peticiones http, traduce los datos de entrada JSON
+
 @RestController
 @RequestMapping("/api/pedidos")
 public class PedidoController {

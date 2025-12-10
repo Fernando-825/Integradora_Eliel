@@ -1,6 +1,7 @@
 package com.fastfood.FastFood_service.model.dto;
 
 // DTO para la petición POST /api/pedidos
+// Es para recibir datos de un nuevo pedido del cliente
 public class PedidoRequest {
     private String nombreCliente;
     private String descripcion;

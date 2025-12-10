@@ -2,6 +2,9 @@ package com.fastfood.FastFood_service.datastructures;
 
 import com.fastfood.FastFood_service.model.Pedido;
 
+// Checa los pedidos que estan listos para ser despachados en FIFO son con status REGISTRADO
+// Utiliza un arreglo circular para almacenar los pedidos y punteros front y rear
+// para la gestión de la cola, optimizando el uso del espacio.
 public class PedidoQueue {
     private static final int MAX_SIZE = 100;
     private Pedido[] queueArray;
@@ -16,7 +19,7 @@ public class PedidoQueue {
         this.currentSize = 0;
     }
 
-    /** Insertar al final */
+    /** Insertar pedido al final */
     public void enqueue(Pedido pedido) {
         if (currentSize == MAX_SIZE) {
             throw new IllegalStateException("La cola está llena.");
@@ -26,7 +29,7 @@ public class PedidoQueue {
         currentSize++;
     }
 
-    /** Eliminar del frente */
+    /** Elimina y devuelve el pedido del frente usa la funcionalidad Despachar*/
     public Pedido dequeue() {
         if (isEmpty()) {
             return null; // O lanzar excepción
