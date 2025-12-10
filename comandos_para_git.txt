@@ -1,0 +1,13 @@
+echo "# Integradora_Eliel" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Fernando-825/Integradora_Eliel.git
+git push -u origin main
+
+
+Y si ya esta ligada la carpeta a un repo:
+git remote add origin https://github.com/Fernando-825/Integradora_Eliel.git
+git branch -M main
+git push -u origin main

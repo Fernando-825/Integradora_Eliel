@@ -1,0 +1,29 @@
+1. POST raw / JSON (Agregar nuevo pedido): http://localhost:8080/api/pedidos
+
+{
+    "nombreCliente": "Fernando Martínez",
+    "descripcion": "2 Hamburguesas, 1 Refresco Grande, 1 Papas Medianas",
+    "monto": 250.50,
+    "estado": "REGISTRADO"
+}
+
+2. Listar todos los pedidos (GET) 200 ok:
+http://localhost:8080/api/pedidos
+
+3. Consultar un pedido por id (GET) 200 ok:
+http://localhost:8080/api/pedidos/1
+
+4. Despachar el siguiente pedido (POST) 200 ok:
+http://localhost:8080/api/pedidos/despachar
+
+5. Obtener estadísticas (GET) 200 ok:
+http://localhost:8080/api/pedidos/estadisticas
+
+6. Cálculo recursivo del monto total (GET) 200 ok:
+http://localhost:8080/api/pedidos/total-recursivo
+
+7. Cancelar un pedido (DELETE) 200 ok:
+http://localhost:8080/api/pedidos/2
+
+8. Rollback de la última operación (POST) 200 ok:
+http://localhost:8080/api/pedidos/rollback
